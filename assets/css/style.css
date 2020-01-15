@@ -1,0 +1,9 @@
+h1 {
+  color: blue;
+  font-size: x-large;
+  text-align: center;
+}
+
+.textarea {
+  border: 2px dashed;
+}
