@@ -11,22 +11,23 @@
 
     <!-- reset css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link rel='stylesheet' type="text/css" href="./assets/css/style.css" />
     <!-- Bootstrap CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link type="text/css" href="./assets/css/style.css" />
   </head>
 
   <body class="container-fluid">
-    <div>
+    <div class="blink">
       <h1>
-        <p>Get your passwords here!</p>
-        <p><strong>Best</strong> passwords on the internet!</p>
+        <p><u>Get your passwords here!</u></p>
+        <p><strong><i>Best passwords on the internet!</i></strong></p>
         <p>
-          We'll beat any competitior's password <strong>AT NO COST!</strong>
+          We'll beat any competitior's password! 
+          <br><strong>AT NO COST!</strong>
         </p>
       </h1>
     </div>
@@ -34,16 +35,25 @@
     <!-- main div with textarea and buttons -->
     <div class="main">
       <h2>Generate Password</h2>
+      <div class="textareaBox">
       <div class="textarea">
         <p>Your Secure Password</p>
       </div>
+      </div>
 
       <!-- buttons -->
-      <div class="buttons d-flex">
+      <div class="buttons">
       <button type="button" class="btn btn-success">Generate password</button>
       <button type="button" class="btn btn-secondary justify-content-end">Copy link to clipboard</button>
       </div>
     </div>
+
+
+
+
+    <!-- my javaScript -->
+
+      <script type='text/javaScript' src="/assets/javaScript/script.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

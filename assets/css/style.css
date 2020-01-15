@@ -1,9 +1,40 @@
 h1 {
-  color: blue;
+  color: rgb(255, 0, 0);
   font-size: x-large;
   text-align: center;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+.textareaBox{
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  margin-top: 4%;
+  margin-bottom: 3.5%;
 }
 
 .textarea {
-  border: 2px dashed;
+  border: 2px lightgrey dashed;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 15%; 
+  margin: 2%;
+
+
 }
+
+.main {
+  border: 1px black;
+  box-shadow: 1px rgba(250, 235, 215, 0.87);
+  position: relative;
+  margin:10%;
+  width: 80%;
+}
+
