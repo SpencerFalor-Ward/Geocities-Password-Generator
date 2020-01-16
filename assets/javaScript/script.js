@@ -8,3 +8,5 @@ function blinkIt() {
 }
 
 setInterval(blinkIt, 750 /* blinking interval in ms */);
+
+console.log(setInterval)
