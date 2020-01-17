@@ -3,7 +3,8 @@
 }
 
 html {
-  background: repeating-linear-gradient(45deg, black, transparent 100px);
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 99, 0.562), transparent 100px);
+  
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   max-width: 960px;
   margin: auto;
+  background: none;
 }
 
 h1 {
@@ -20,10 +22,22 @@ h1 {
   text-align: center;
   line-height: 1.5;
   text-shadow: 2px 2px lawngreen;
+  filter: brightness(1);
+}
+
+.generator {
+  color: blue;
+  font-size: xx-large;
+  text-align: center;
+  line-height: 1.5;
+  text-shadow: 3px 3px lawngreen;
+  filter: brightness(1);
+  padding-bottom: 6%;
 }
 
 h2 {
   font-size: x-large;
+  filter: brightness(2);
 }
 
 strong {
@@ -42,22 +56,40 @@ i {
 }
 
 .textarea {
-  border: 2px #FAFA37 dashed;
+  border: 2px #fafa37 dashed;
   text-align: center;
   padding-top: 2%;
   padding-bottom: 15%;
   margin: 2%;
-  font-size:
+  filter: brightness(2);
 }
 
 .main {
   background: orange;
+  /* background: white; */
   border: 1px black;
   box-shadow: 1px 1px 5px 5px #87ff2a;
   position: relative;
   margin: 2% 10%;
   width: auto;
-  padding: 6%;
-  color: white;
-  opacity: 0.95;
+  padding: 2% 6% 6%;
+  /* color: white; */
+  color: blue;
+  opacity: 0.98;
+  filter: brightness(1.1);
+}
+
+.buttons {
+}
+
+.btn {
+  display: inline-flex;
+  padding: 1%;
+  width: auto;
+  align-items: unset;
+  border: auto black;
+}
+
+.btn-secondary {
+  justify-content: flex-end;
 }

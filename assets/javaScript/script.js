@@ -1,3 +1,5 @@
+
+// try a mouse fucntion to stop the blinking while mouse over text box
 function blinkIt() {
   var blinks = document.getElementsByClassName("blink");
   for (var i = 0, l = blinks.length; i < l; i++) {
@@ -7,7 +9,7 @@ function blinkIt() {
   }
 }
 
-setInterval(blinkIt, 1 /* blinking interval in ms */);
+// setInterval(blinkIt, 1 /* blinking interval in ms */);
 
 console.log(setInterval);
 
@@ -22,10 +24,37 @@ function blinkIt1() {
     //     else {
     //       return blinkIt1;
     //   }
-    
   }
 }
 
-setInterval(blinkIt1, 3000 /* blinking interval in ms */);
+// setInterval(blinkIt1, 3000 /* blinking interval in ms */);
 
 console.log(setInterval);
+
+// password character pool
+// use .split() in the functions to make into array
+var alphL = "abcdefghijklmnopqrstuvwxyz";
+var alphC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var num = '0123456789';
+var spcl = ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
+
+// prompt windows
+var numPick = prompt("Type a number between 8 and 128");
+var alphLOn = prompt('Would you like to use lowercase letters?');
+var alphCOn = prompt('Would you like to use uppercase letters?');
+var numOn = prompt('Would you like to use numbers?');
+var spclOn = prompt('Would you like to use special characters?');
+
+
+// html element references
+var genEl = document.querySelector('generate');
+var copyEl = document.querySelector('copy');
+
+if 
+(confirm(alphLOn || alphC || numOn || spclOn)) {
+    
+}
+
+
+
+

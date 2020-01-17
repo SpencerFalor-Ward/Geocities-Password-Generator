@@ -7,17 +7,17 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Password Makerz</title>
+    <title>Password Secure</title>
 
     <!-- reset css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <!-- Bootstrap CSS -->
-    <link
+    <link rel='stylesheet'
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
 
   <body class="container-fluid">
@@ -37,6 +37,9 @@
 
     <!-- main div with textarea and buttons -->
     <div class="main inline-block blink1">
+      <h1 class='generator'><strong>
+        #1 Password Generator!</h1>
+      </strong>
       <h2><strong>
         Generate Password</h2>
       </strong>
@@ -47,9 +50,9 @@
       </div>
 
       <!-- buttons -->
-      <div class="buttons d-flex">
-        <button type="button" class="btn btn-success">Generate password</button>
-        <button type="button" class="btn btn-secondary d-flex justify">
+      <div class="buttons">
+        <button type="button" class="btn btn-success" id = 'generate' >Generate password</button>
+        <button type="button" class="btn btn-secondary" id = 'copy'>
           Copy link to clipboard
         </button>
       </div>
