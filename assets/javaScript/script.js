@@ -4,11 +4,20 @@ function blinkIt() {
   for (var i = 0, l = blinks.length; i < l; i++) {
     var blink = blinks[i];
     var visiblity = blink.style.visibility;
-    blink.style.visibility = visiblity == "visible" ? "hidden" : "visible";
+    if (visiblity === "visible") {
+      blink.style.visibility = "hidden";
+      setTimeout(blinkIt, 100);
+    } else {
+      blink.style.visibility = "visible";
+      setTimeout(blinkIt, 300);
+    }
+    //blink.style.visibility = visiblity == "visible" ? "hidden" : "visible";
   }
 }
 
 // setInterval(blinkIt, 1 /* blinking interval in ms */);
+
+// to make inner blink you can switch between border and no border, or make a new class with the attributes and switched between the two
 
 console.log(setInterval);
 
@@ -52,52 +61,47 @@ var copyEl = document.querySelector("#copy");
 // NEED parseint the value input in the prompt
 // NEED if statement to ensure parameters of input are correct, if not send new prompt
 
-// if (confirm(alphLOn || alphC || numOn || spclOn)) {}
-
-// function getRandomInt(arrAlphL) {
-//   var arrAlphL = alphL.split("");
-
-//   return Math.floor(Math.random() * Math.floor(arrAlphL.length));
-// }
-
 console.log(this);
 
 // password(prompt answer)
 genEl.addEventListener("click", function(event) {
   event.preventDefault();
-  var numPick = prompt("Type a number between 8 and 128");
 
-  if (pwLength < 8 || pwLength > 128 || isNaN) {
-    alert("Please enter a number between 8 and 128");
-    submitOk = "false";
-  }
+  do {
+    var numPick = prompt("Type a number between 8 and 128");
+    var pwLength = parseInt(numPick.trim());
+    console.log(pwLength);
 
-  if (submitOk == "false") {
-    return numPick;
-  }
+    if (pwLength < 8 || pwLength > 128 || pwLength === NaN) {
+      alert("Please enter a number between 8 and 128");
+    }
+  } while (pwLength < 8 || pwLength > 128 || pwLength === NaN);
 
   var alphLOn = confirm("Would you like to use lowercase letters?");
   var alphCOn = confirm("Would you like to use uppercase letters?");
   var numOn = confirm("Would you like to use numbers?");
   var spclOn = confirm("Would you like to use special characters?");
-  var characters = alphLOn.true ? (characters += alphL) : "";
-  var pwLength = parseInt(console.log(numPick));
-  var yourPW = document.querySelector("#textarea");
+  var characters = "";
 
-  alphCOn.true ? (characters += alphC) : "";
-  numOn.true ? (characters += num) : "";
-  spclOn.true ? (characters += spcl) : "";
-  yourPW.value = password(pwLength.value, characters);
+  alphLOn === true ? (characters += alphL) : "";
+  alphCOn === true ? (characters += alphC) : "";
+  numOn === true ? (characters += num) : "";
+  spclOn === true ? (characters += spcl) : "";
+
+  var yourPW = document.querySelector(".textarea");
+  yourPW.textContent = password(pwLength, characters);
 });
 
 function password(l, characters) {
   var pwd = "";
-  for (i = 0; i < l; i++) {
+  for (var i = 0; i < l; i++) {
     pwd += characters.charAt(Math.floor(Math.random() * characters.length));
+    console.log(pwd);
   }
 
   return pwd;
 }
+
 // use the '.push' function to add to the array of PW values in the random value generator function
 
 // if (tagName !== "h1" && tagName !== "h2" && tagName !== "p" && tagName !== "div") {
