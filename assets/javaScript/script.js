@@ -21,7 +21,7 @@ function blinkIt() {
 
 console.log(setInterval);
 
-function blinkIt1(event) {
+function blinkIt1() {
   // event.stopPropagation(blink);
   var blinks = document.getElementsByClassName("blink1");
   for (var i = 0, l = blinks.length; i < l; i++) {
@@ -66,12 +66,12 @@ console.log(this);
 // password(prompt answer)
 genEl.addEventListener("click", function(event) {
   event.preventDefault();
-
+  
   do {
     var numPick = prompt("Type a number between 8 and 128");
     var pwLength = parseInt(numPick.trim());
     console.log(pwLength);
-
+    
     if (pwLength < 8 || pwLength > 128 || pwLength === NaN) {
       alert("Please enter a number between 8 and 128");
     }
@@ -82,12 +82,12 @@ genEl.addEventListener("click", function(event) {
   var numOn = confirm("Would you like to use numbers?");
   var spclOn = confirm("Would you like to use special characters?");
   var characters = "";
-
+  
   alphLOn === true ? (characters += alphL) : "";
   alphCOn === true ? (characters += alphC) : "";
   numOn === true ? (characters += num) : "";
   spclOn === true ? (characters += spcl) : "";
-
+  
   var yourPW = document.querySelector(".textarea");
   yourPW.textContent = password(pwLength, characters);
 });
@@ -98,19 +98,32 @@ function password(l, characters) {
     pwd += characters.charAt(Math.floor(Math.random() * characters.length));
     console.log(pwd);
   }
-
+  
   return pwd;
 }
 
-// use the '.push' function to add to the array of PW values in the random value generator function
+//copy to clipboard code
+copyEl.addEventListener("click", function(event) {
+  event.preventDefault();
 
-// if (tagName !== "h1" && tagName !== "h2" && tagName !== "p" && tagName !== "div") {
-//   alert("please enter a valid tag");
-// } else {
-//   var tag = document.createElement(tagName);
-//   tag.textContent = "This was made via prompts. It's a " + tagName;
-//   document.body.appendChild(tag);
-// }
+const copyToClipboard = str => {
+  const el = document.querySelector(".textarea"); // Create a <textarea> element
+  el.value = str; // Set its value to the string that you want copied
+  el.setAttribute("readonly", ""); // Make it readonly to be tamper-proof
+  el.style.position = "absolute";
+  el.style.left = "-9999px"; // Move outside the screen to make it invisible
+  document.body.appendChild(el); // Append the <textarea> element to the HTML document
+  const selected =
+    document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+      ? document.getSelection().getRangeAt(0) // Store selection if found
+      : false; // Mark as false to know no selection existed before
+  el.select(); // Select the <textarea> content
+  document.execCommand("copy"); // Copy - only works as a result of a user action (e.g. click events)
+  document.body.removeChild(el); // Remove the <textarea> element
+  if (selected) {
+    // If a selection existed before copying
+    document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
+    document.getSelection().addRange(selected); // Restore the original selection
+  }
+}
 
-// create element to contain the password or change element???
-// var pTag = document.createElement("p")
