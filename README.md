@@ -20,7 +20,7 @@ We were given the following guidelines to complete a page that generates a rando
 >THEN a password is generated
 
 <p align="center">
-  <img alt="My password generator" src=generatorScreenCapture.jpg>
+  <img alt="My password generator" src=generatorScreenCapture.JPG>
     </p>
 <p align="center">
   <strong>:bomb::bomb:It took a *long* time to look this good:bomb::bomb:</strong>
