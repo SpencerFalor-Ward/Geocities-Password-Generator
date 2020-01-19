@@ -1,4 +1,3 @@
-// try a mouse fucntion to stop the blinking while mouse over text box
 function blinkIt() {
   var blinks = document.getElementsByTagName("html");
   for (var i = 0, l = blinks.length; i < l; i++) {
@@ -9,48 +8,15 @@ function blinkIt() {
       setTimeout(blinkIt, 0.1);
     } else {
       blink.style.visibility = "visible";
-      setTimeout(blinkIt, 3000);
+      setTimeout(blinkIt, 1000);
     }
   }
 }
 blinkIt();
-//couldnt get this to work
-// function blinkIt1() {
-//   var blinks = document.getElementsByName("#blink1");
-//   for (var i = 0, l = blinks.length; i < l; i++) {
-//     var blink = blinks[i];
-//     var visiblity = blink.style.visibility;
-//     if (visiblity === "visible") {
-//       blink.style.visibility = "hidden";
-//       setTimeout(blinkIt1, 0.2);
-//     } else {
-//       blink.style.visibility = "visible";
-//       setTimeout(blinkIt1, 1600);
-//     }
-//   }
-// }
-// blinkIt1();
 
 // to make inner blink you can switch between border and no border, or make a new class with the attributes and switched between the two
 
 console.log(setInterval);
-
-// function blinkIt1() {
-//   // event.stopPropagation(blink);
-//   var blinks = document.getElementsByClassName("blink1");
-//   for (var i = 0, l = blinks.length; i < l; i++) {
-//     var blink = blinks[i];
-//     var visiblity = blink.style.visibility;
-//     blink.style.visibility = visiblity == "visible" ? "hidden" : "visible";
-//     // if (blink.style.visibility == "visible") {
-//     //   clearInterval(setInterval);
-//     // } else {
-//     //   return blinkIt1;
-//     // }
-//   }
-// }
-
-// // setInterval(blinkIt1, 3000 /* blinking interval in ms */);
 
 console.log(setInterval);
 
@@ -64,23 +30,16 @@ var arrAlphC = alphC.split("");
 var arrNum = num.split("");
 var arrSpcl = spcl.split("");
 
-// prompt windows
-
 // html element references
 var genEl = document.querySelector("#generate");
 var copyEl = document.querySelector("#copy");
-
-// need to add event addEventListener to activate the generate / copy buttons on click
-
-// NEED parseint the value input in the prompt
-// NEED if statement to ensure parameters of input are correct, if not send new prompt
 
 console.log(this);
 
 // password(prompt answer)
 genEl.addEventListener("click", function(event) {
   event.preventDefault();
-  blinkIt();
+  // blinkIt();
   do {
     do {
       var numPick = prompt("Type a number between 8 and 128");
@@ -94,7 +53,6 @@ genEl.addEventListener("click", function(event) {
         pwLength == ""
       ) {
         alert("Please enter a number between 8 and 128");
-        // return false;
       }
     } while (
       pwLength < 8 ||
@@ -123,7 +81,6 @@ function password(l, characters) {
   var pwd = "";
   for (var i = 0; i < l; i++) {
     pwd += characters.charAt(Math.floor(Math.random() * characters.length));
-    // console.log(pwd);
   }
 
   return pwd;
