@@ -1,4 +1,4 @@
-# [HW-3--PasswordGenerator](https://spencerfalor-ward.github.io/HW-3---passwordGenerator/)
+# [HW-3-PasswordGenerator](https://spencerfalor-ward.github.io/HW-3---passwordGenerator/)
 JavaScript **HW#3-Password Generator**, *....enter JavaScript!!<strong>!</strong>*
 
 ## Goal for the project
