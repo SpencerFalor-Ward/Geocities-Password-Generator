@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
 
-  <body class="container-fluid">
+  <body class="">
     <div class="blink">
       <h1>
         <strong>
@@ -33,32 +33,34 @@
           <br />AT NO COST!</strong>
         </p>
       </h1>
-    </div>
-
-    <!-- main div with textarea and buttons -->
-    <div class="main inline-block blink1">
-      <h1 class='generator'><strong>
-        #1 Password Generator!</h1>
-      </strong>
-      <h2><strong>
-        Generate Password</h2>
-      </strong>
-      <div class="textareaBox">
-        <div class="textarea">
-          <p>Your Password</p>
+      
+      <!-- main div with textarea and buttons -->
+      <div class="main inline-block blink1">
+        <h1 class='generator'><strong>
+          #1 Password Generator!</h1>
+        </strong>
+        <h2><strong>
+          Generate Password</h2>
+        </strong>
+        <div class="textareaBox" id = "blink1">
+          <div class="textarea">
+            <p><strong>
+              Your Password</p>
+            </strong>
+          </div>
+        </div>
+        
+        <!-- buttons -->
+        <div class="flex-container">
+          <button type="button" class="btn btn-success" id = 'generate'>
+            Generate password</button>
+            <button type="button" class="btn btn-secondary" id = 'copy'>
+              Copy link to clipboard
+            </button>
+          </div>
         </div>
       </div>
-
-      <!-- buttons -->
-      <div class="buttons">
-        <button type="button" class="btn btn-success" id = 'generate'>
-          Generate password</button>
-        <button type="button" class="btn btn-secondary" id = 'copy'>
-          Copy link to clipboard
-        </button>
-      </div>
-    </div>
-
+        
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

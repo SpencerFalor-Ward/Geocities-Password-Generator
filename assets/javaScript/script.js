@@ -1,42 +1,56 @@
 // try a mouse fucntion to stop the blinking while mouse over text box
 function blinkIt() {
-  var blinks = document.getElementsByClassName("blink");
+  var blinks = document.getElementsByTagName("html");
   for (var i = 0, l = blinks.length; i < l; i++) {
     var blink = blinks[i];
     var visiblity = blink.style.visibility;
     if (visiblity === "visible") {
       blink.style.visibility = "hidden";
-      setTimeout(blinkIt, 100);
+      setTimeout(blinkIt, 0.1);
     } else {
       blink.style.visibility = "visible";
-      setTimeout(blinkIt, 300);
+      setTimeout(blinkIt, 3000);
     }
-    //blink.style.visibility = visiblity == "visible" ? "hidden" : "visible";
   }
 }
-
-// setInterval(blinkIt, 1 /* blinking interval in ms */);
+blinkIt();
+//couldnt get this to work
+// function blinkIt1() {
+//   var blinks = document.getElementsByName("#blink1");
+//   for (var i = 0, l = blinks.length; i < l; i++) {
+//     var blink = blinks[i];
+//     var visiblity = blink.style.visibility;
+//     if (visiblity === "visible") {
+//       blink.style.visibility = "hidden";
+//       setTimeout(blinkIt1, 0.2);
+//     } else {
+//       blink.style.visibility = "visible";
+//       setTimeout(blinkIt1, 1600);
+//     }
+//   }
+// }
+// blinkIt1();
 
 // to make inner blink you can switch between border and no border, or make a new class with the attributes and switched between the two
 
 console.log(setInterval);
 
-function blinkIt1() {
-  // event.stopPropagation(blink);
-  var blinks = document.getElementsByClassName("blink1");
-  for (var i = 0, l = blinks.length; i < l; i++) {
-    var blink = blinks[i];
-    var visiblity = blink.style.visibility;
-    blink.style.visibility = visiblity == "visible" ? "hidden" : "visible";
-    // if (blink.style.visibility == "visible") {
-    //   clearInterval(setInterval);
-    // } else {
-    //   return blinkIt1;
-    // }
-  }
-}
+// function blinkIt1() {
+//   // event.stopPropagation(blink);
+//   var blinks = document.getElementsByClassName("blink1");
+//   for (var i = 0, l = blinks.length; i < l; i++) {
+//     var blink = blinks[i];
+//     var visiblity = blink.style.visibility;
+//     blink.style.visibility = visiblity == "visible" ? "hidden" : "visible";
+//     // if (blink.style.visibility == "visible") {
+//     //   clearInterval(setInterval);
+//     // } else {
+//     //   return blinkIt1;
+//     // }
+//   }
+// }
 
-// setInterval(blinkIt1, 3000 /* blinking interval in ms */);
+// // setInterval(blinkIt1, 3000 /* blinking interval in ms */);
 
 console.log(setInterval);
 
@@ -66,16 +80,22 @@ console.log(this);
 // password(prompt answer)
 genEl.addEventListener("click", function(event) {
   event.preventDefault();
-
+  blinkIt();
   do {
     var numPick = prompt("Type a number between 8 and 128");
     var pwLength = parseInt(numPick.trim());
     console.log(pwLength);
 
-    if (pwLength < 8 || pwLength > 128 || pwLength === NaN) {
+    if (
+      pwLength < 8 ||
+      pwLength > 128 ||
+      pwLength === NaN ||
+      pwLength == ""
+    ) {
       alert("Please enter a number between 8 and 128");
+      // return false;
     }
-  } while (pwLength < 8 || pwLength > 128 || pwLength === NaN);
+  } while (pwLength < 8 || pwLength > 128 || pwLength === NaN || pwLength == "");
 
   var alphLOn = confirm("Would you like to use lowercase letters?");
   var alphCOn = confirm("Would you like to use uppercase letters?");

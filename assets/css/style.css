@@ -3,8 +3,11 @@
 }
 
 html {
-  background: repeating-linear-gradient(0deg, rgba(0, 0, 99, 0.562), transparent 100px);
-  
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 99, 0.562),
+    transparent 100px
+  );
 }
 
 body {
@@ -64,6 +67,24 @@ i {
   filter: brightness(2);
 }
 
+/* .textareaBox {
+    border-top: 2px solid #30bfbf;
+    border-bottom: 2px solid #30bfbf;
+    margin-top: 4%;
+    margin-bottom: 3.5%;
+  }
+  
+  .textarea {
+    border: 2px #fafa37 dashed;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 15%;
+    margin: 2%;
+    filter: brightness(2);
+    font-size: large;
+    visibility: hidden;
+   } */
+
 .main {
   background: orange;
   /* background: white; */
@@ -79,17 +100,19 @@ i {
   filter: brightness(1.1);
 }
 
-.buttons {
+.flex-container {
+  display: inline-flex;
+  width: 100%;
 }
 
-.btn {
-  display: inline-flex;
+/* .btn {
+  /* display: inline-flex; */
   padding: 1%;
   width: auto;
   align-items: unset;
   border: auto black;
-}
+} */
 
-.btn-secondary {
+#copy {
   justify-content: flex-end;
 }
