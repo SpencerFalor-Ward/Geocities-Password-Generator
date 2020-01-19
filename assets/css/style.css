@@ -32,10 +32,10 @@ h1 {
   color: blue;
   font-size: xx-large;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1;
   text-shadow: 3px 3px lawngreen;
   filter: brightness(1);
-  padding-bottom: 6%;
+  padding-bottom: 3%;
 }
 
 h2 {
