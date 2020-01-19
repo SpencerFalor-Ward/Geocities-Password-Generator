@@ -82,31 +82,38 @@ genEl.addEventListener("click", function(event) {
   event.preventDefault();
   blinkIt();
   do {
-    var numPick = prompt("Type a number between 8 and 128");
-    var pwLength = parseInt(numPick.trim());
-    console.log(pwLength);
+    do {
+      var numPick = prompt("Type a number between 8 and 128");
+      var pwLength = parseInt(numPick.trim());
+      console.log(pwLength);
 
-    if (
+      if (
+        pwLength < 8 ||
+        pwLength > 128 ||
+        pwLength === NaN ||
+        pwLength == ""
+      ) {
+        alert("Please enter a number between 8 and 128");
+        // return false;
+      }
+    } while (
       pwLength < 8 ||
       pwLength > 128 ||
       pwLength === NaN ||
       pwLength == ""
-    ) {
-      alert("Please enter a number between 8 and 128");
-      // return false;
-    }
-  } while (pwLength < 8 || pwLength > 128 || pwLength === NaN || pwLength == "");
+    );
 
-  var alphLOn = confirm("Would you like to use lowercase letters?");
-  var alphCOn = confirm("Would you like to use uppercase letters?");
-  var numOn = confirm("Would you like to use numbers?");
-  var spclOn = confirm("Would you like to use special characters?");
-  var characters = "";
+    var alphLOn = confirm("Would you like to use lowercase letters?");
+    var alphCOn = confirm("Would you like to use uppercase letters?");
+    var numOn = confirm("Would you like to use numbers?");
+    var spclOn = confirm("Would you like to use special characters?");
+    var characters = "";
 
-  alphLOn === true ? (characters += alphL) : "";
-  alphCOn === true ? (characters += alphC) : "";
-  numOn === true ? (characters += num) : "";
-  spclOn === true ? (characters += spcl) : "";
+    alphLOn === true ? (characters += alphL) : "";
+    alphCOn === true ? (characters += alphC) : "";
+    numOn === true ? (characters += num) : "";
+    spclOn === true ? (characters += spcl) : "";
+  } while (alphLOn === false && alphCOn === false && numOn === false && spclOn === false);
 
   var yourPW = document.querySelector(".textarea");
   yourPW.textContent = password(pwLength, characters);

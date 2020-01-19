@@ -65,6 +65,7 @@ i {
   padding-bottom: 15%;
   margin: 2%;
   filter: brightness(2);
+  word-wrap: break-word;
 }
 
 /* .textareaBox {
