@@ -1,4 +1,4 @@
-# :closed_lock_with_key: [HW-3-PasswordGenerator](https://spencerfalor-ward.github.io/HW-3---passwordGenerator/) :closed_lock_with_key:
+# :closed_lock_with_key: [Geocities-Password-Generator](https://spencerfalor-ward.github.io/HW-3---passwordGenerator/) :closed_lock_with_key:
 
 [![Followers](https://img.shields.io/github/followers/SpencerFalor-Ward?style=social)](https://github.com/SpencerFalor-Ward?tab=followers) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Language](https://img.shields.io/github/languages/top/SpencerFalor-Ward/HW-3---passwordGenerator)](https://github.com/SpencerFalor-Ward/HW-3---passwordGenerator/search?l=javascript) 
