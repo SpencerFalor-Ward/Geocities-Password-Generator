@@ -24,12 +24,10 @@ We were given the following guidelines to complete a page that generates a rando
 >WHEN prompted for password criteria
 >THEN a password is generated
 
-<p align="center">
-  <img alt="My password generator" src=generatorScreenCapture.JPG>
-    </p>
-<p align="center">
-  <strong>:bomb::bomb:It took a *long* time to look this good:bomb::bomb:</strong>
-    </p>
+![Password Generator demo](./passwordGeneratorDemo.gif)
+
+:bomb::bomb:It took a *long* time to look this good:bomb::bomb:
+  
 
 After starting this I thuoght it would be funny to try an make my page look like a very reliable and secure place to get a password. To do this I purposly made it look dated and simple, via it's asthetics, as well as implimenting a visually annoying blink to emmulate buggy code. I lost much sleep to accomplish this trival joke, but it makes me laugh, and I hope the user at least chuckles.
 
